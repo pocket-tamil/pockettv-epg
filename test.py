@@ -23,7 +23,7 @@ JIOTVPLUS_FILE = "jiotvplus.json"
 
 SOURCE_EPG_URLS = (
     "https://jioepg.djdoolky76.com/epg.xml.gz",
-    "https://olidigital.space/olitv-epg.php",
+    "https://i.mjh.nz/SamsungTVPlus/in.xml",
     "https://whiplash.cc/scheds/schedule.xml",
 )
 
