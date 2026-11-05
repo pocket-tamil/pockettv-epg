@@ -1,0 +1,34 @@
+name: Generate Merged EPG
+
+on:
+  schedule:
+    - cron: '0 */5 * * *'
+  workflow_dispatch:   # Allows manual execution
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run EPG Merger Script
+        env:
+          EPG_SOURCES: ${{ secrets.EPG_SOURCES }}
+        run: python scripts/generate.py
+
+      - name: Commit and Push Updated EPG
+        run: |
+          git config --global user.name "EPG Bot"
+          git config --global user.email "epg-bot@users.noreply.github.com"
+          git add AIO_epg.xml.gz
+          git commit -m "Auto-update AIO_epg.xml.gz [skip ci]" || echo "No changes to commit"
+          git push
