@@ -1,3 +1,4 @@
+# scripts/generate.py
 import gzip
 import os
 import urllib.request
@@ -11,18 +12,26 @@ def generate_merged_epg():
         print("No EPG sources found in environment variables.")
         return
 
-    output_path = 'AIO_epg.xml.gz'
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    output_path = os.path.join(root_dir, 'AIO_epg.xml.gz')
 
     combined_root = ET.Element('tv')
     channel_ids = set()
     channel_count = 0
     programme_count = 0
 
+    # Use a standard browser User-Agent header to prevent 403 Forbidden errors
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+
     for idx, source in enumerate(sources):
         temp_file = f"temp_{idx}.xml.gz"
-        print(f"Fetching source #{idx + 1}...")
+        print(f"Fetching source #{idx + 1}: {source}")
         try:
-            urllib.request.urlretrieve(source, temp_file)
+            req = urllib.request.Request(source, headers=headers)
+            with urllib.request.urlopen(req) as response, open(temp_file, 'wb') as out_file:
+                out_file.write(response.read())
             
             with gzip.open(temp_file, 'rb') as f_in:
                 tree = ET.parse(f_in)
