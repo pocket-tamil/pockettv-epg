@@ -1,4 +1,3 @@
-# scripts/generate.py
 import gzip
 import os
 import urllib.request
@@ -17,17 +16,16 @@ def generate_merged_epg():
 
     combined_root = ET.Element('tv')
     channel_ids = set()
-    channel_count = 0
-    programme_count = 0
+    total_channels = 0
+    total_programmes = 0
 
-    # Use a standard browser User-Agent header to prevent 403 Forbidden errors
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
     for idx, source in enumerate(sources):
         temp_file = f"temp_{idx}.xml.gz"
-        print(f"Fetching source #{idx + 1}: {source}")
+        print(f"\n--- Processing Source #{idx + 1}: {source} ---")
         try:
             req = urllib.request.Request(source, headers=headers)
             with urllib.request.urlopen(req) as response, open(temp_file, 'wb') as out_file:
@@ -37,16 +35,24 @@ def generate_merged_epg():
                 tree = ET.parse(f_in)
                 root = tree.getroot()
 
-                for child in root:
-                    if child.tag == 'channel':
-                        ch_id = child.get('id')
-                        if ch_id not in channel_ids:
+                source_channels = 0
+                source_programmes = 0
+
+                # Recursive helper or deep search for elements regardless of nesting
+                for elem in root.iter():
+                    if elem.tag == 'channel':
+                        ch_id = elem.get('id')
+                        if ch_id and ch_id not in channel_ids:
                             channel_ids.add(ch_id)
-                            combined_root.append(child)
-                            channel_count += 1
-                    elif child.tag == 'programme':
-                        combined_root.append(child)
-                        programme_count += 1
+                            combined_root.append(elem)
+                            source_channels += 1
+                            total_channels += 1
+                    elif elem.tag == 'programme':
+                        combined_root.append(elem)
+                        source_programmes += 1
+                        total_programmes += 1
+
+                print(f"Extracted {source_channels} channels and {source_programmes} programmes from Source #{idx + 1}.")
 
         except Exception as e:
             print(f"Error processing source #{idx + 1}: {e}")
@@ -54,9 +60,10 @@ def generate_merged_epg():
             if os.path.exists(temp_file):
                 os.remove(temp_file)
 
-    print(f"Writing {channel_count} channels and {programme_count} programmes to {output_path}...")
-    combined_tree = ET.ElementTree(combined_root)
+    print(f"\nTotal combined: {total_channels} channels and {total_programmes} programmes.")
+    print(f"Writing final compressed data to {output_path}...")
     
+    combined_tree = ET.ElementTree(combined_root)
     with gzip.open(output_path, 'wb') as f_out:
         combined_tree.write(f_out, encoding='utf-8', xml_declaration=True)
 
