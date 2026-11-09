@@ -55,7 +55,7 @@ CUSTOM_XMLTV_ENTRIES = (
         "description": (
            "24/7 Continuous Stream - Non-stop entertainment broadcasting round the clock."
         ),
-        "category": "Program,
+        "category": "Program",
     },
     {
         "channel_id": "Sitcoms.Dummy",
