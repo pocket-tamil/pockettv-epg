@@ -48,6 +48,16 @@ CUSTOM_XMLTV_ENTRIES = (
         "category": "Movie",
     },
     {
+        "channel_id": "24.7.Program",
+        "channel_name": "24/7 Programming",
+        "legacy_programme_channel": "dummy-program",
+        "title": "24/7 Non-Stop Programming",
+        "description": (
+           "24/7 Continuous Stream - Non-stop entertainment broadcasting round the clock."
+        ),
+        "category": "Program,
+    },
+    {
         "channel_id": "Sitcoms.Dummy",
         "channel_name": "24/7 Sitcoms",
         "legacy_programme_channel": "dummy-sitcoms",
