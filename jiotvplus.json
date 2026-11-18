@@ -1,11 +1,5 @@
 [
     {
-        "channel_name":  "Zee Talkies",
-        "channel_id":  "153",
-        "category":  "Marathi",
-        "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTalkies.png"
-    },
-    {
         "channel_name":  "Zee Cinema HD",
         "channel_id":  "165",
         "category":  "Movies",
@@ -16,12 +10,6 @@
         "channel_id":  "167",
         "category":  "Entertainment",
         "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTVHD.png"
-    },
-    {
-        "channel_name":  "Zee Cinemalu",
-        "channel_id":  "413",
-        "category":  "Telugu",
-        "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeCinemalu.png"
     },
     {
         "channel_name":  "Zee Yuva",
@@ -42,22 +30,10 @@
         "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_24_Taas.png"
     },
     {
-        "channel_name":  "Zee Marathi",
-        "channel_id":  "445",
-        "category":  "Marathi",
-        "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeMarathi.png"
-    },
-    {
         "channel_name":  "Zee 24 Ghanta",
         "channel_id":  "464",
         "category":  "Bengali",
         "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/24_Ghanta_TV.png"
-    },
-    {
-        "channel_name":  "Zee Cinema",
-        "channel_id":  "484",
-        "category":  "Movies",
-        "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeCinema.png"
     },
     {
         "channel_name":  "Zee Bollywood",
@@ -88,18 +64,6 @@
         "channel_id":  "625",
         "category":  "Bengali",
         "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeBangla.png"
-    },
-    {
-        "channel_name":  "Zee Tamil",
-        "channel_id":  "628",
-        "category":  "Tamil",
-        "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTamil.png"
-    },
-    {
-        "channel_name":  "Zee Telugu",
-        "channel_id":  "638",
-        "category":  "Telugu",
-        "logo_url":  "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTelugu.png"
     },
     {
         "channel_name":  "Zee Bharat",
@@ -258,22 +222,10 @@
         "logo_url":  "https://img.media.jio.com/tvpimages/96/65/302113_1749664252703_l_medium.jpg"
     },
     {
-        "channel_name":  "Star Sports Select 1",
-        "channel_id":  "1123",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/13/82/301994_1749664069587_l_medium.jpg"
-    },
-    {
         "channel_name":  "Star Sports Select 2 HD",
         "channel_id":  "461",
         "category":  "Sports",
         "logo_url":  "https://img.media.jio.com/tvpimages/98/79/302114_1749665414817_l_medium.jpg"
-    },
-    {
-        "channel_name":  "Star Sports Select 2",
-        "channel_id":  "1114",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/98/48/301989_1749664475828_l_medium.jpg"
     },
     {
         "channel_name":  "Star Sports 1 HD",
@@ -282,22 +234,10 @@
         "logo_url":  "https://img.media.jio.com/tvpimages/76/32/301981_1749665664018_l_medium.jpg"
     },
     {
-        "channel_name":  "Star Sports 1",
-        "channel_id":  "1142",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/56/92/302115_1749665579801_l_medium.jpg"
-    },
-    {
         "channel_name":  "Star Sports 1 Hindi HD",
         "channel_id":  "1108",
         "category":  "Sports",
         "logo_url":  "https://img.media.jio.com/tvpimages/5/6/301982_1749665314605_l_medium.jpg"
-    },
-    {
-        "channel_name":  "Star Sports 1 Hindi",
-        "channel_id":  "362",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/13/81/302112_1749665154709_l_medium.jpg"
     },
     {
         "channel_name":  "Star Sports 2 HD",
@@ -306,22 +246,10 @@
         "logo_url":  "https://img.media.jio.com/tvpimages/41/51/301983_1749666169105_l_medium.jpg"
     },
     {
-        "channel_name":  "Star Sports 2",
-        "channel_id":  "1141",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/11/30/302116_1749666029079_l_medium.jpg"
-    },
-    {
         "channel_name":  "Star Sports 2 Hindi HD",
         "channel_id":  "1984",
         "category":  "Sports",
         "logo_url":  "https://img.media.jio.com/tvpimages/56/36/301229_1742214332015_l_medium.jpg"
-    },
-    {
-        "channel_name":  "Star Sports 2 Hindi",
-        "channel_id":  "1985",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/57/17/302124_1749130246443_l_medium.jpg"
     },
     {
         "channel_name":  "Star Sports 3",
@@ -336,22 +264,10 @@
         "logo_url":  "https://img.media.jio.com/tvpimages/19/19/302122_1749662923298_l_medium.jpg"
     },
     {
-        "channel_name":  "Star Sports 1 Tamil",
-        "channel_id":  "1124",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/69/73/301995_1749664384503_l_medium.jpg"
-    },
-    {
         "channel_name":  "Star Sports 1 Telugu HD",
         "channel_id":  "3278",
         "category":  "Sports",
         "logo_url":  "https://img.media.jio.com/tvpimages/19/57/302123_1749663029798_l_medium.jpg"
-    },
-    {
-        "channel_name":  "Star Sports 1 Telugu",
-        "channel_id":  "1651",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/26/67/302119_1749662981095_l_medium.jpg"
     },
     {
         "channel_name":  "Star Sports 2 Tamil HD",
@@ -360,22 +276,10 @@
         "logo_url":  "https://img.media.jio.com/tvpimages/50/43/302120_1749664850896_l_medium.jpg"
     },
     {
-        "channel_name":  "Star Sports 2 Tamil",
-        "channel_id":  "2853",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/74/92/301561_1749664725619_l_medium.jpg"
-    },
-    {
         "channel_name":  "Star Sports 2 Telugu HD",
         "channel_id":  "3274",
         "category":  "Sports",
         "logo_url":  "https://img.media.jio.com/tvpimages/84/67/302121_1749664974599_l_medium.jpg"
-    },
-    {
-        "channel_name":  "Star Sports 2 Telugu",
-        "channel_id":  "2852",
-        "category":  "Sports",
-        "logo_url":  "https://img.media.jio.com/tvpimages/41/94/301562_1749665043898_l_medium.jpg"
     },
     {
         "channel_name":  "Zee Kannada News",
